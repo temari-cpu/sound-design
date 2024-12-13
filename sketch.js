@@ -139,5 +139,5 @@ function jumpSong2() {
   if(jumpV <= 17.3424){
     jumpV = 0;
   }
-  mm.jump(jumpV);
+  mm2.jump(jumpV);
 }
