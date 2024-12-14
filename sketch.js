@@ -10,9 +10,13 @@ let buttonPause1
 
 let buttonJump;
 let buttonJump2;
+let buttonJump3;
+let buttonJump4;
 
 let vol;
 let sliderRate;
+
+
 
 let jumpV;
 let amp;
@@ -27,7 +31,7 @@ function preload() {
 
 function setup() {
   createCanvas(640, 640);
-  // mm2.play();
+
   
   amp=new p5.Amplitude();
   
@@ -39,6 +43,13 @@ function setup() {
   buttonPause.mousePressed(pauseMusic);
   
   
+  buttonJump = createButton("<<");
+  buttonJump.mousePressed(jumpSong2);
+  buttonJump = createButton(">>");
+  buttonJump.mousePressed(jumpSong);
+  
+  
+  
   
   button1 = createButton("PLAY 2");
   button1.mousePressed(playMusic2);
@@ -46,16 +57,17 @@ function setup() {
   buttonPause1 = createButton("PAUSE 2");
   buttonPause1.mousePressed(pauseMusic2);
   
-  
-
   buttonJump = createButton("<<");
-  buttonJump.mousePressed(jumpSong2);
+  buttonJump.mousePressed(jumpSong4);
   buttonJump = createButton(">>");
-  buttonJump.mousePressed(jumpSong);
+  buttonJump.mousePressed(jumpSong3);
+  
  
   slider = createSlider(0, 2, 0.5, 0.1);
-  sliderPan = createSlider(-1, 1, 0, 0.1);
   sliderRate = createSlider(0, 2, 1, 0.1);
+  
+  
+
 
   jumpV = 0;
 }
@@ -65,6 +77,10 @@ function draw() {
   mm.setVolume(vol);
   vol = slider.value();
   mm.rate(sliderRate.value());
+  
+  mm2.setVolume(vol);
+  
+  mm2.rate(sliderRate.value());
   
   
   fill(255,255,255);
@@ -126,18 +142,56 @@ function pauseMusic2() {
   }
 }
 
+
+
 function jumpSong() {
-  jumpV = jumpV + 17.3424;
-  if(jumpV + 17.3424 >= 173.424){
-    jumpV = 173.423;
+  if(jumpV + 33.4 < 167){
+    jumpV = jumpV + 33.4;
+  }
+  
+  if(jumpV + 33.4 >= 167){
+    jumpV = 167;
   }
   mm.jump(jumpV);
+  
 }
 
 function jumpSong2() {
-  jumpV = jumpV - 17.3424;
-  if(jumpV <= 17.3424){
+  
+  jumpV = jumpV - 33.4;
+  
+  
+  if(jumpV <= 33.4){
+    jumpV = 0;
+  }
+  mm.jump(jumpV);
+  
+}
+
+
+function jumpSong3() {
+  if(jumpV + 36.8 < 184){
+    jumpV = jumpV + 36.8;
+  }
+  
+  if(jumpV + 36.8 >= 184){
+    jumpV = 184;
+  }
+  mm2.jump(jumpV);
+  
+}
+
+function jumpSong4() {
+  jumpV = jumpV - 36.8;
+  if(jumpV <= 36.8){
     jumpV = 0;
   }
   mm2.jump(jumpV);
+  
 }
+
+
+
+
+
+
