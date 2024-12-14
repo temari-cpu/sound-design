@@ -85,8 +85,12 @@ function draw() {
   
   fill(34, 139, 34); // 초록색
   
-  triangle(320, 200, 130, 500, 510, 500); // 아래쪽 삼각형
-  triangle(320, 100, 150, 350, 490, 350); // 위쪽 삼각형
+  triangle(320, 200, 100, 500, 540, 500); // 아래쪽 삼각형
+  triangle(320, 100, 130, 380, 510, 380); // 위쪽 삼각형
+  triangle(320, 80, 160, 260, 480, 260); // 위쪽 삼각형
+  
+  fill(139, 69, 19); // 갈색
+  rect(270, 500, 100, 140);
   
   
   fill(255,255,255);
@@ -105,8 +109,25 @@ function draw() {
   ellipse(150,150,amp.getLevel()*400,amp.getLevel()*400);
   
   
-  // fill(255,0,0);
-  // ellipse(200,200,amp.getLevel()*1000,amp.getLevel()*1000);
+  
+  fill(255,255,255);
+  ellipse(540,100,amp.getLevel()*500,amp.getLevel()*500);
+  ellipse(440,100,amp.getLevel()*500,amp.getLevel()*500);
+  ellipse(490,50,amp.getLevel()*500,amp.getLevel()*500);
+  ellipse(490,150,amp.getLevel()*500,amp.getLevel()*500);
+  ellipse(490,100,amp.getLevel()*500,amp.getLevel()*500);
+ 
+  
+  
+  fill(0,0,0);
+  ellipse(540,100,amp.getLevel()*400,amp.getLevel()*400);
+  ellipse(440,100,amp.getLevel()*400,amp.getLevel()*400);
+  ellipse(490,50,amp.getLevel()*400,amp.getLevel()*400);
+  ellipse(490,150,amp.getLevel()*400,amp.getLevel()*400);
+  
+  
+  fill(255,0,0);
+  ellipse(200,300,amp.getLevel()*200,amp.getLevel()*200);
   // console.log(jumpV);
   // if(jumpV > 173.424){
   //   mm.stop();
