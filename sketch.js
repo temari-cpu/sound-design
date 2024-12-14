@@ -73,7 +73,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(0);
   mm.setVolume(vol);
   vol = slider.value();
   mm.rate(sliderRate.value());
@@ -83,18 +83,30 @@ function draw() {
   mm2.rate(sliderRate.value());
   
   
+  fill(34, 139, 34); // 초록색
+  
+  triangle(320, 200, 130, 500, 510, 500); // 아래쪽 삼각형
+  triangle(320, 100, 150, 350, 490, 350); // 위쪽 삼각형
+  
+  
   fill(255,255,255);
-  ellipse(100,100,50,50);
-  ellipse(300,100,50,50);
+  ellipse(100,100,amp.getLevel()*500,amp.getLevel()*500);
+  ellipse(200,100,amp.getLevel()*500,amp.getLevel()*500);
+  ellipse(150,50,amp.getLevel()*500,amp.getLevel()*500);
+  ellipse(150,150,amp.getLevel()*500,amp.getLevel()*500);
+  ellipse(150,100,amp.getLevel()*500,amp.getLevel()*500);
  
   
   
-  fill(0,255,0);
-  ellipse(100+amp.getLevel()*100,100,25,25);
-  ellipse(300+amp.getLevel()*100,100,25,25);
+  fill(0,0,0);
+  ellipse(100,100,amp.getLevel()*400,amp.getLevel()*400);
+  ellipse(200,100,amp.getLevel()*400,amp.getLevel()*400);
+  ellipse(150,50,amp.getLevel()*400,amp.getLevel()*400);
+  ellipse(150,150,amp.getLevel()*400,amp.getLevel()*400);
   
-  fill(255,0,0);
-  ellipse(200,200,amp.getLevel()*1000,amp.getLevel()*1000);
+  
+  // fill(255,0,0);
+  // ellipse(200,200,amp.getLevel()*1000,amp.getLevel()*1000);
   // console.log(jumpV);
   // if(jumpV > 173.424){
   //   mm.stop();
@@ -145,11 +157,11 @@ function pauseMusic2() {
 
 
 function jumpSong() {
-  if(jumpV + 33.4 < 167){
-    jumpV = jumpV + 33.4;
-  }
   
-  if(jumpV + 33.4 >= 167){
+  jumpV = jumpV + 33;
+  
+  
+  if(jumpV + 33 >= 167){
     jumpV = 167;
   }
   mm.jump(jumpV);
@@ -158,10 +170,10 @@ function jumpSong() {
 
 function jumpSong2() {
   
-  jumpV = jumpV - 33.4;
+  jumpV = jumpV - 33;
   
   
-  if(jumpV <= 33.4){
+  if(jumpV <= 33){
     jumpV = 0;
   }
   mm.jump(jumpV);
@@ -170,11 +182,11 @@ function jumpSong2() {
 
 
 function jumpSong3() {
-  if(jumpV + 36.8 < 184){
-    jumpV = jumpV + 36.8;
-  }
   
-  if(jumpV + 36.8 >= 184){
+    jumpV = jumpV + 36;
+  
+  
+  if(jumpV + 36 >= 184){
     jumpV = 184;
   }
   mm2.jump(jumpV);
@@ -182,8 +194,8 @@ function jumpSong3() {
 }
 
 function jumpSong4() {
-  jumpV = jumpV - 36.8;
-  if(jumpV <= 36.8){
+  jumpV = jumpV - 36;
+  if(jumpV <= 36){
     jumpV = 0;
   }
   mm2.jump(jumpV);
