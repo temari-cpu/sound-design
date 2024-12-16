@@ -128,12 +128,37 @@ function draw() {
   
   fill(255,0,0);
   ellipse(200,300,amp.getLevel()*200,amp.getLevel()*200);
+  fill(255,0,0);
+  ellipse(440,300,amp.getLevel()*200,amp.getLevel()*200);
+  
+  
+  
+  fill(255,0,255);
+  ellipse(100,500,amp.getLevel()*200,amp.getLevel()*200);
+  fill(255,0,255);
+  ellipse(540,500,amp.getLevel()*200,amp.getLevel()*200);
+  // console.log(jumpV);
   // console.log(jumpV);
   // if(jumpV > 173.424){
   //   mm.stop();
   //   button.html("PLAY");
   // }
+  fill(255, 255, 0);
+  drawDiamond(320, 80, 40);
+  
 }
+
+function drawDiamond(x, y, size) {
+  beginShape();
+  vertex(x, y - size); // 위
+  vertex(x + size, y); // 오른쪽
+  vertex(x, y + size); // 아래
+  vertex(x - size, y); // 왼쪽
+  endShape(CLOSE);
+}
+
+
+
 
 function playMusic() {
   if (!mm.isPlaying()) {
