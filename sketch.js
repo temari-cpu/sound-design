@@ -93,7 +93,26 @@ function draw() {
   rect(270, 500, 100, 140);
   
   
-  fill(255,255,255);
+  fill(255,255,255); //왼쪽 눈
+  ellipse(70,100+amp.getLevel()*800,20,20);
+  ellipse(180,150+amp.getLevel()*800,20,20);
+  ellipse(50,200+amp.getLevel()*800,20,20);
+  ellipse(120,300+amp.getLevel()*800,20,20);
+  ellipse(90,400+amp.getLevel()*800,20,20);
+  ellipse(190,400+amp.getLevel()*800,20,20);
+  ellipse(30,600+amp.getLevel()*800,20,20);
+  
+  
+  fill(255,255,255); //오른쪽 눈
+  ellipse(570,100+amp.getLevel()*800,20,20);
+  ellipse(460,150+amp.getLevel()*800,20,20);
+  ellipse(590,200+amp.getLevel()*800,20,20);
+  ellipse(520,300+amp.getLevel()*800,20,20);
+  ellipse(550,400+amp.getLevel()*800,20,20);
+  ellipse(450,400+amp.getLevel()*800,20,20);
+  ellipse(610,600+amp.getLevel()*800,20,20);
+  
+  fill(255,255,255); //왼쪽 구름
   ellipse(100,100,amp.getLevel()*500,amp.getLevel()*500);
   ellipse(200,100,amp.getLevel()*500,amp.getLevel()*500);
   ellipse(150,50,amp.getLevel()*500,amp.getLevel()*500);
@@ -102,7 +121,7 @@ function draw() {
  
   
   
-  fill(0,0,0);
+  fill(0,0,0); //왼쪽 구름
   ellipse(100,100,amp.getLevel()*400,amp.getLevel()*400);
   ellipse(200,100,amp.getLevel()*400,amp.getLevel()*400);
   ellipse(150,50,amp.getLevel()*400,amp.getLevel()*400);
@@ -110,7 +129,7 @@ function draw() {
   
   
   
-  fill(255,255,255);
+  fill(255,255,255); //오른쪽 구름
   ellipse(540,100,amp.getLevel()*500,amp.getLevel()*500);
   ellipse(440,100,amp.getLevel()*500,amp.getLevel()*500);
   ellipse(490,50,amp.getLevel()*500,amp.getLevel()*500);
@@ -118,31 +137,37 @@ function draw() {
   ellipse(490,100,amp.getLevel()*500,amp.getLevel()*500);
  
   
-  
-  fill(0,0,0);
+   
+  fill(0,0,0); //오른쪽 구름
   ellipse(540,100,amp.getLevel()*400,amp.getLevel()*400);
   ellipse(440,100,amp.getLevel()*400,amp.getLevel()*400);
   ellipse(490,50,amp.getLevel()*400,amp.getLevel()*400);
   ellipse(490,150,amp.getLevel()*400,amp.getLevel()*400);
   
   
+  
+  fill(0,0,255); 
+  ellipse(260,250,amp.getLevel()*400,amp.getLevel()*400);
+  ellipse(380,250,amp.getLevel()*400,amp.getLevel()*400);
+  ellipse(320,400,amp.getLevel()*400,amp.getLevel()*400);
+  
+ 
+  
+  
+  fill(255,0,255); 
+  ellipse(260,250,amp.getLevel()*200,amp.getLevel()*200);
+  ellipse(380,250,amp.getLevel()*200,amp.getLevel()*200);
+  ellipse(320,400,amp.getLevel()*200,amp.getLevel()*200);
+  
+  
+ 
+  
+  
   fill(255,0,0);
-  ellipse(200,300,amp.getLevel()*200,amp.getLevel()*200);
-  fill(255,0,0);
-  ellipse(440,300,amp.getLevel()*200,amp.getLevel()*200);
-  
-  
-  
-  fill(255,0,255);
   ellipse(100,500,amp.getLevel()*200,amp.getLevel()*200);
-  fill(255,0,255);
+  fill(255,0,0);
   ellipse(540,500,amp.getLevel()*200,amp.getLevel()*200);
-  // console.log(jumpV);
-  // console.log(jumpV);
-  // if(jumpV > 173.424){
-  //   mm.stop();
-  //   button.html("PLAY");
-  // }
+  
   fill(255, 255, 0);
   drawDiamond(320, 80, 40);
   
