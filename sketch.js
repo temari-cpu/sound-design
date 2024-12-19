@@ -147,17 +147,40 @@ function draw() {
   
   
   fill(0,0,255); 
-  ellipse(260,250,amp.getLevel()*400,amp.getLevel()*400);
-  ellipse(380,250,amp.getLevel()*400,amp.getLevel()*400);
-  ellipse(320,400,amp.getLevel()*400,amp.getLevel()*400);
+  ellipse(245,217,amp.getLevel()*200,amp.getLevel()*200); 
+  fill(255,0,255);
+  ellipse(245,217,amp.getLevel()*100,amp.getLevel()*100);
+  
+  fill(0,0,255); 
+  ellipse(338,246,amp.getLevel()*200,amp.getLevel()*200); 
+  fill(255,0,255);
+  ellipse(338,246,amp.getLevel()*100,amp.getLevel()*100);
+
+  
+  
+  fill(255,0,255);
+  triangle(255, 345, 199+amp.getLevel()*80, 313+amp.getLevel()*80, 259+amp.getLevel()*80, 286+amp.getLevel()*80); // 리본
+  
+  triangle(255, 345, 255+amp.getLevel()*80, 391+amp.getLevel()*80, 315+amp.getLevel()*80, 374+amp.getLevel()*80);
+  
+  triangle(255, 345, 182+amp.getLevel()*80, 323+amp.getLevel()*80, 192+amp.getLevel()*80, 349+amp.getLevel()*80); // 리본
+  triangle(255, 345, 213+amp.getLevel()*80, 375+amp.getLevel()*80, 238+amp.getLevel()*80, 391+amp.getLevel()*80);
+  
+  
+  
+  fill(34, 139, 34)
+  triangle(255, 345, 223+amp.getLevel()*80, 315+amp.getLevel()*80, 246+amp.getLevel()*80, 307+amp.getLevel()*80); // 리본
+  triangle(255, 345, 266+amp.getLevel()*80, 375+amp.getLevel()*80, 289+amp.getLevel()*80, 369+amp.getLevel()*80);
+  
+  
   
  
   
   
-  fill(255,0,255); 
-  ellipse(260,250,amp.getLevel()*200,amp.getLevel()*200);
-  ellipse(380,250,amp.getLevel()*200,amp.getLevel()*200);
-  ellipse(320,400,amp.getLevel()*200,amp.getLevel()*200);
+//   fill(255,0,255); 
+//   ellipse(260,250,amp.getLevel()*200,amp.getLevel()*200);
+//   ellipse(380,250,amp.getLevel()*200,amp.getLevel()*200);
+//   ellipse(320,400,amp.getLevel()*200,amp.getLevel()*200);
   
   
  
@@ -170,6 +193,50 @@ function draw() {
   
   fill(255, 255, 0);
   drawDiamond(320, 80, 40);
+  
+  
+  
+  fill(150, 200, 250); // 색상 설정
+  noStroke(); // 외곽선 없음
+
+  // 마우스 위치에 따라 기울어진 사각형 그리기
+  let x1 = 230, y1 = 182;
+  let x2 = 246, y2 = 163; 
+  let x4 = 428, y3 = 261;
+  let x3 = 446, y4 = 259;
+  
+
+  quad(x1, y1, x2, y2, x3, y3, x4, y4);
+  
+  
+  fill(150, 200, 250); // 색상 설정
+  noStroke(); // 외곽선 없음
+
+  // 마우스 위치에 따라 기울어진 사각형 그리기
+  let x5 = 428, y5 = 261;
+  let x6 = 438, y6 = 276; 
+  let x7 = 164, y7 = 379;
+  let x8 = 185, y8 = 379;
+  
+
+  quad(x5, y5, x6, y6, x7, y7, x8, y8);
+  
+  
+  fill(150, 200, 250); // 색상 설정
+  noStroke(); // 외곽선 없음
+
+  // 마우스 위치에 따라 기울어진 사각형 그리기
+  let x9 = 187, y9 = 381;
+  let x10 = 177, y10 = 394; 
+  let x11 = 539, y11 = 499;
+  let x12 = 531, y12 = 499;
+  
+
+  quad(x9, y9, x10, y10, x11, y11, x12, y12);
+  
+   fill(225); // 텍스트 색상
+  textSize(16); // 텍스트 크기
+  text(`X: ${mouseX}, Y: ${mouseY}`, mouseX + 10, mouseY - 10);
   
 }
 
