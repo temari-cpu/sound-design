@@ -1,3 +1,6 @@
+// 음악 하나 확인하실 때마다 다시 재생해서 확인해주세요! (1재생 1음악) 
+// 1재생 2음악으로 하면 오류가 납니다..
+
 let mm;
 let mm2;
 
@@ -146,50 +149,58 @@ function draw() {
   
   
   
+  
+  
   fill(0,0,255); 
   ellipse(245,217,amp.getLevel()*200,amp.getLevel()*200); 
-  fill(255,0,255);
+  fill(200, 100, 255);
   ellipse(245,217,amp.getLevel()*100,amp.getLevel()*100);
   
   fill(0,0,255); 
   ellipse(338,246,amp.getLevel()*200,amp.getLevel()*200); 
-  fill(255,0,255);
+  fill(200, 100, 255);
   ellipse(338,246,amp.getLevel()*100,amp.getLevel()*100);
 
   
   
   fill(255,0,255);
-  triangle(255, 345, 199+amp.getLevel()*80, 313+amp.getLevel()*80, 259+amp.getLevel()*80, 286+amp.getLevel()*80); // 리본
+  triangle(255, 345, 199+amp.getLevel()*100, 313+amp.getLevel()*100, 259+amp.getLevel()*100, 286+amp.getLevel()*100); // 리본
   
-  triangle(255, 345, 255+amp.getLevel()*80, 391+amp.getLevel()*80, 315+amp.getLevel()*80, 374+amp.getLevel()*80);
+  triangle(255, 345, 255+amp.getLevel()*100, 391+amp.getLevel()*100, 315+amp.getLevel()*100, 374+amp.getLevel()*100);
   
-  triangle(255, 345, 182+amp.getLevel()*80, 323+amp.getLevel()*80, 192+amp.getLevel()*80, 349+amp.getLevel()*80); // 리본
-  triangle(255, 345, 213+amp.getLevel()*80, 375+amp.getLevel()*80, 238+amp.getLevel()*80, 391+amp.getLevel()*80);
+  triangle(255, 345, 182+amp.getLevel()*100, 323+amp.getLevel()*100, 192+amp.getLevel()*100, 349+amp.getLevel()*100); // 리본
+  triangle(255, 345, 213+amp.getLevel()*100, 375+amp.getLevel()*100, 238+amp.getLevel()*100, 391+amp.getLevel()*100);
   
   
   
-  fill(34, 139, 34)
-  triangle(255, 345, 223+amp.getLevel()*80, 315+amp.getLevel()*80, 246+amp.getLevel()*80, 307+amp.getLevel()*80); // 리본
-  triangle(255, 345, 266+amp.getLevel()*80, 375+amp.getLevel()*80, 289+amp.getLevel()*80, 369+amp.getLevel()*80);
+  fill(34, 139, 34) //분홍색 리본
+  triangle(255, 345, 223+amp.getLevel()*100, 315+amp.getLevel()*100, 246+amp.getLevel()*100, 307+amp.getLevel()*100); // 리본
+  triangle(255, 345, 266+amp.getLevel()*100, 375+amp.getLevel()*100, 289+amp.getLevel()*100, 369+amp.getLevel()*100);
   
+  
+  fill(255, 165, 0); //주황색 리본
+  triangle(342, 307, 342+amp.getLevel()*100, 284+amp.getLevel()*100, 318+amp.getLevel()*100, 290+amp.getLevel()*100); // 리본
+  
+  triangle(342, 307, 344+amp.getLevel()*100, 329+amp.getLevel()*100, 367+amp.getLevel()*100, 318+amp.getLevel()*100);
+  
+  fill(255, 165, 0); //주황색 리본
+  triangle(398, 280, 401+amp.getLevel()*100, 253+amp.getLevel()*100, 379+amp.getLevel()*100, 267+amp.getLevel()*100); // 리본
+  
+  triangle(398, 280, 403+amp.getLevel()*100, 308+amp.getLevel()*100, 423+amp.getLevel()*100, 297+amp.getLevel()*100);
+ 
+  
+  fill(255, 255, 0);
+  ellipse(309,464, amp.getLevel()*200,amp.getLevel()*200);
+  fill(34, 139, 34); // 초록색
+  ellipse(309,464, amp.getLevel()*100,amp.getLevel()*100);
+  
+
   
   
  
   
   
-//   fill(255,0,255); 
-//   ellipse(260,250,amp.getLevel()*200,amp.getLevel()*200);
-//   ellipse(380,250,amp.getLevel()*200,amp.getLevel()*200);
-//   ellipse(320,400,amp.getLevel()*200,amp.getLevel()*200);
-  
-  
- 
-  
-  
-  fill(255,0,0);
-  ellipse(100,500,amp.getLevel()*200,amp.getLevel()*200);
-  fill(255,0,0);
-  ellipse(540,500,amp.getLevel()*200,amp.getLevel()*200);
+
   
   fill(255, 255, 0);
   drawDiamond(320, 80, 40);
@@ -234,9 +245,35 @@ function draw() {
 
   quad(x9, y9, x10, y10, x11, y11, x12, y12);
   
-   fill(225); // 텍스트 색상
-  textSize(16); // 텍스트 크기
-  text(`X: ${mouseX}, Y: ${mouseY}`, mouseX + 10, mouseY - 10);
+  
+  fill(150, 200, 250); // 색상 설정
+  noStroke(); // 외곽선 없음
+
+  // 마우스 위치에 따라 기울어진 사각형 그리기
+  let x13 = 230, y13 = 182;
+  let x14 = 246, y14 = 163; 
+  let x15 = 389, y15 = 163;
+  let x16 = 396, y16 = 168;
+  
+
+  quad(x13, y13, x14, y14, x15, y15, x16, y16);
+  
+  
+  
+  stroke(230, 230, 250); // 선의 색상 (빨강)
+  strokeWeight(4); // 두꺼운 선
+  line(100, 499, 450, 380); // 대각선
+  
+  
+  
+  fill(255,0,0); //빨간 장식
+  ellipse(100,500,amp.getLevel()*200,amp.getLevel()*200);
+  fill(255,0,0);
+  ellipse(540,500,amp.getLevel()*200,amp.getLevel()*200);
+  
+  //  fill(225); // 텍스트 색상
+  // textSize(16); // 텍스트 크기
+  // text(`X: ${mouseX}, Y: ${mouseY}`, mouseX + 10, mouseY - 10);
   
 }
 
